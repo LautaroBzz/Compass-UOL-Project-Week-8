@@ -4,8 +4,9 @@
   "private": true,
   "description": "Compass UOL Bootcamp Proyect Week 8",
   "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "react-router-dom": "5.1.2",
     "react-scripts": "3.2.0"
   },
   "scripts": {
