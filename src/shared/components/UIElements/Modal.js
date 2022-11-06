@@ -11,9 +11,7 @@ const ModalOverlay = (props) => {
         <h2>{props.header}</h2>
       </header>
       <form
-        onSubmit={
-          props.onSubmit ? props.onSubmit : event => event.preventDefault()
-        }
+        onSubmit={ props.onSubmit ? props.onSubmit : event => event.preventDefault() }
       >
         <div className={`modal__content ${props.contentClass}`}>
           {props.children}
@@ -30,8 +28,9 @@ const ModalOverlay = (props) => {
 
 const Modal = (props) => {
   return (
-    <React.Fragment>
+    <>
       {props.show && <Backdrop onClick={props.onCancel} />}
+
       <CSSTransition
         in={props.show}
         mountOnEnter
@@ -41,7 +40,7 @@ const Modal = (props) => {
       >
         <ModalOverlay {...props} />
       </CSSTransition>
-    </React.Fragment>
+    </>
   );
 };
 

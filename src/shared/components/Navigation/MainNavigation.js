@@ -10,7 +10,7 @@ const MainNavigation = (props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
-    <React.Fragment>
+    <>
       { drawerOpen && <Backdrop onClick={() => setDrawerOpen(false)} /> }
 
       <SideDrawer show={drawerOpen} onClick={() => setDrawerOpen(false)}>
@@ -18,8 +18,7 @@ const MainNavigation = (props) => {
           <NavLinks />
         </nav>
       </SideDrawer>
-
-      
+     
       <MainHeader>
         <button className="main-navigation__menu-btn" onClick={() => setDrawerOpen(true)}>
           <span />
@@ -33,7 +32,7 @@ const MainNavigation = (props) => {
           <NavLinks />
         </nav>
       </MainHeader>
-    </React.Fragment>
+    </>
   );
 };
 
